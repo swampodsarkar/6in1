@@ -1,0 +1,21 @@
+import { initializeApp } from 'firebase/app';
+import { getDatabase } from 'firebase/database';
+import { getAuth } from 'firebase/auth';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDc7SUlLi_tE9L9GBzfwhi99vfZFvZfn7Y",
+  authDomain: "support-ticket-1d282.firebaseapp.com",
+  databaseURL: "https://support-ticket-1d282-default-rtdb.firebaseio.com",
+  projectId: "support-ticket-1d282",
+  storageBucket: "support-ticket-1d282.firebasestorage.app",
+  messagingSenderId: "35056522642",
+  appId: "1:35056522642:web:99f3fa371317f54c07dd4b",
+  measurementId: "G-W4C3D97E6G"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+// Initialize Realtime Database & Auth
+export const db = getDatabase(app);
+export const auth = getAuth(app);
